@@ -133,6 +133,60 @@ font-size:40px;
 
 }
 
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.nav{
+    padding:15px 0;
+}
+
+.logo img{
+    width:80px;
+}
+
+nav{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+nav.active{
+    display:block;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:0;
+}
+
+nav ul li{
+    border-bottom:1px solid #eee;
+}
+
+nav ul li a{
+    display:block;
+    padding:18px;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.btn{
+    display:none;
+}
+
+}
+
 /* ================= SECTION TITLE ================= */
 
 .section-title{
@@ -527,9 +581,9 @@ transform:translateY(-10px);
 }
 
 .launch-card img{
-width:100%;
-height:250px;
-object-fit:fill;
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
 .launch-content{
@@ -2178,5 +2232,964 @@ font-size:17px;
         font-size: 24px;
 
     }
+
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    .launch-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .launch-card{
+        width:100%;
+    }
+
+    .launch-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+    }
+
+    .launch-content h3{
+        font-size:20px;
+        line-height:1.4;
+    }
+
+    .launch-content p{
+        font-size:15px;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE - HERO + BANNER + CARDS
+========================================= */
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero{
+    padding:40px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.hero-image img,
+.hero img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:16px;
+}
+
+/* ---------- COURSE CARD ---------- */
+
+.course-card1{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.course-card1 img{
+    width:380px;
+    max-width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.course-content{
+    flex:1;
+}
+
+/* ---------- NEW LAUNCH ---------- */
+
+.launch-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.launch-card{
+    width:100%;
+    overflow:hidden;
+}
+
+.launch-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.launch-content{
+    padding:20px;
+}
+
+.launch-content h3{
+    font-size:22px;
+    line-height:1.4;
+    word-break:break-word;
+}
+
+.launch-content p{
+    font-size:16px;
+}
+
+/* ---------- ALL COURSES ---------- */
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    width:100%;
+}
+
+.course-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* =========================================
+            TABLET
+========================================= */
+
+@media (max-width:992px){
+
+.hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.course-card1{
+    flex-direction:column;
+}
+
+.course-card1 img{
+    width:100%;
+    height:260px;
+}
+
+.marketing-grid,
+.bundle-grid{
+    grid-template-columns:1fr;
+}
+
+.launch-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.courses-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* =========================================
+              MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+.container{
+    width:94%;
+}
+
+.hero{
+    padding:25px 0;
+}
+
+.hero-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.hero h1{
+    font-size:30px;
+    line-height:1.3;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    width:100%;
+}
+
+.primary,
+.secondary{
+    width:100%;
+    text-align:center;
+}
+
+/* Banner */
+
+.hero-image img,
+.hero img{
+    width:100%;
+    height:auto;
+}
+
+/* Flagship Cards */
+
+.course-card1{
+    flex-direction:column;
+}
+
+.course-card1 img{
+    width:100%;
+    height:220px;
+}
+
+.course-content{
+    padding:18px;
+}
+
+.course-content h3{
+    font-size:20px;
+}
+
+/* New Launch */
+
+.launch-grid{
+    grid-template-columns:1fr;
+}
+
+.launch-card{
+    width:100%;
+}
+
+.launch-card img{
+    height:220px;
+}
+
+.launch-content h3{
+    font-size:20px;
+}
+
+.launch-content p{
+    font-size:15px;
+}
+
+/* All Courses */
+
+.courses-grid{
+    grid-template-columns:1fr;
+}
+
+.course-card img{
+    height:220px;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    font-size:15px;
+}
+
+}
+
+/* =========================================
+          SMALL MOBILE
+========================================= */
+
+@media (max-width:480px){
+
+.hero h1{
+    font-size:26px;
+}
+
+.section-title h2{
+    font-size:26px;
+}
+
+.course-content h3{
+    font-size:18px;
+}
+
+.launch-content h3{
+    font-size:18px;
+}
+
+.float-btn{
+    padding:10px 14px;
+    font-size:14px;
+}
+
+.float-btn i{
+    font-size:20px;
+}
+
+}
+
+grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+
+/* ==========================================
+   MARKETING + BUNDLE + ADVANTAGES
+========================================== */
+
+/* MARKETING */
+
+.marketing{
+    padding:70px 0;
+}
+
+.marketing-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:50px;
+    align-items:center;
+}
+
+.marketing img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+.marketing h2{
+    font-size:42px;
+}
+
+.marketing li{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.enroll-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* BUNDLE */
+
+.bundle{
+    padding:70px 0;
+}
+
+.bundle-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:50px;
+    align-items:center;
+}
+
+.bundle-image img{
+    width:100%;
+    display:block;
+}
+
+.bundle-content h2{
+    font-size:40px;
+}
+
+.bundle-content li{
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* ADVANTAGES */
+
+.advantages{
+    padding:70px 0;
+}
+
+.advantages-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.advantages-image img{
+    width:100%;
+    max-width:380px;
+}
+
+.advantages-list{
+    flex:1;
+}
+
+.advantage-item p{
+    font-size:24px;
+    line-height:1.5;
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.marketing-grid,
+.bundle-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.marketing img,
+.bundle-image img{
+    max-width:650px;
+    margin:auto;
+}
+
+.marketing h2,
+.bundle-content h2{
+    font-size:34px;
+}
+
+.marketing li,
+.bundle-content li{
+    font-size:18px;
+}
+
+.advantages-wrapper{
+    flex-direction:column;
+    text-align:center;
+}
+
+.advantages-list::before{
+    display:none;
+}
+
+.advantage-item{
+    justify-content:center;
+}
+
+}
+
+/* ==========================================
+              MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.marketing,
+.bundle,
+.advantages{
+    padding:50px 0;
+}
+
+.marketing-grid,
+.bundle-grid{
+    gap:30px;
+}
+
+.marketing h2,
+.bundle-content h2{
+    font-size:28px;
+}
+
+.marketing li,
+.bundle-content li{
+    font-size:16px;
+}
+
+.enroll-btn{
+    width:100%;
+    padding:14px;
+}
+
+.bundle-image img,
+.marketing img{
+    border-radius:14px;
+}
+
+.advantages-image img{
+    width:220px;
+}
+
+.advantage-item{
+    flex-direction:column;
+    text-align:center;
+    gap:12px;
+}
+
+.advantage-item p{
+    font-size:18px;
+}
+
+.number{
+    width:42px;
+    height:42px;
+}
+
+}
+
+/* ==========================================
+          EXTRA SMALL DEVICES
+========================================== */
+
+@media(max-width:480px){
+
+.marketing h2,
+.bundle-content h2{
+    font-size:24px;
+}
+
+.marketing li,
+.bundle-content li{
+    font-size:15px;
+}
+
+.advantages-image img{
+    width:180px;
+}
+
+.advantage-item p{
+    font-size:16px;
+}
+
+}
+
+/* ==========================================
+   CERTIFICATE + ALUMNI + FACULTY
+========================================== */
+
+/* CERTIFICATE */
+
+.certificate-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.certificate-content,
+.certificate-image{
+    flex:1;
+}
+
+.certificate-image img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:auto;
+}
+
+/* ALUMNI */
+
+.alumni-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.alumni-card{
+    width:100%;
+}
+
+.alumni-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.company{
+    width:80px !important;
+    height:auto !important;
+}
+
+/* FACULTY */
+
+.faculty-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.faculty-card{
+    width:100%;
+}
+
+.faculty-card img{
+    width:100%;
+    height:260px;
+    object-fit:contain;
+}
+
+.faculty-info{
+    min-height:auto;
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.certificate-wrapper{
+    flex-direction:column;
+    text-align:center;
+}
+
+.certificate-box{
+    justify-content:center;
+}
+
+.alumni-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.faculty-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ==========================================
+              MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.certificate-section,
+.alumni,
+.faculty{
+    padding:50px 0;
+}
+
+.certificate-content h2{
+    font-size:30px;
+}
+
+.certificate-box{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.certificate-image img{
+    max-width:300px;
+}
+
+.alumni-grid,
+.faculty-grid{
+    grid-template-columns:1fr;
+}
+
+.alumni-card img{
+    height:260px;
+}
+
+.faculty-card img{
+    height:250px;
+}
+
+.alumni .section-title h2,
+.faculty .section-title h2{
+    font-size:30px;
+}
+
+.alumni .section-title p,
+.faculty .section-title p{
+    font-size:15px;
+}
+
+.faculty-info{
+    padding:20px;
+}
+
+.faculty-info p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+}
+
+/* ==========================================
+          SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.certificate-content h2{
+    font-size:26px;
+}
+
+.text h3{
+    font-size:18px;
+}
+
+.text p{
+    font-size:15px;
+}
+
+.alumni-card h3,
+.faculty-card h3{
+    font-size:20px;
+}
+
+.alumni-card h4,
+.faculty-card h4{
+    font-size:14px;
+}
+
+.faculty-card img{
+    height:220px;
+}
+
+.alumni-card img{
+    height:220px;
+}
+
+}
+
+/* ==========================================
+        FAQ
+========================================== */
+
+.faq{
+    padding:60px 0;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-question{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    font-size:18px;
+}
+
+.faq-answer{
+    padding:0 18px;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.faq-title h2{
+    font-size:30px;
+}
+
+.faq-question{
+    font-size:16px;
+    padding:16px;
+}
+
+.faq-answer{
+    font-size:15px;
+}
+
+}
+
+
+/* ==========================================
+        CONTACT
+========================================== */
+
+.contact{
+    padding:60px 0;
+}
+
+.contact-form{
+    width:100%;
+}
+
+.input-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+}
+
+.contact-btn{
+    width:260px;
+    height:60px;
+    font-size:22px;
+}
+
+.contact-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+@media(max-width:768px){
+
+.input-row{
+    grid-template-columns:1fr;
+}
+
+.contact-btn{
+    width:100%;
+}
+
+.contact .section-title h2{
+    font-size:32px;
+}
+
+.info-box h3{
+    font-size:24px;
+}
+
+.info-box p{
+    font-size:16px;
+}
+
+}
+
+
+/* ==========================================
+        FOOTER
+========================================== */
+
+.footer{
+    padding:40px 0;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:768px){
+
+.footer-links{
+    flex-direction:column;
+    gap:15px;
+}
+
+.footer-links a{
+    font-size:16px;
+}
+
+}
+
+
+/* ==========================================
+      FLOATING BUTTONS
+========================================== */
+
+.floating-contact{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:999;
+}
+
+.float-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+@media(max-width:768px){
+
+.floating-contact{
+    right:12px;
+    bottom:12px;
+}
+
+.float-btn{
+
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    padding:0;
+}
+
+.float-btn span{
+    display:none;
+}
+
+.float-btn i{
+    font-size:24px;
+}
+
+}
+
+
+/* ==========================================
+        GLOBAL RESPONSIVE
+========================================== */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+section{
+    overflow:hidden;
+}
+
+.container{
+    width:min(92%,1280px);
+    margin:auto;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+*{
+    word-wrap:break-word;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:30px;
+}
+
+h2{
+    font-size:28px;
+}
+
+h3{
+    font-size:20px;
+}
+
+p{
+    font-size:15px;
+}
+
+section{
+    padding:50px 0;
+}
 
 }
